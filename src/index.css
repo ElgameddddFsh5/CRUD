@@ -1,0 +1,123 @@
+.product {
+  background-color: rgb(250, 249, 249);
+  text-align: center;
+}
+.NotFound {
+  margin: 100px;
+}
+.info {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.C {
+  overflow: hidden;
+  position: relative;
+  width: 220px;
+  text-decoration: none;
+  color: #18272f;
+  font-weight: 700;
+  vertical-align: top;
+  font-size: 4rem;
+}
+
+.C::before,
+.C::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.C::before {
+  background-color: rgb(255, 184, 52);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.C::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: rgb(255, 184, 52);
+}
+
+.C:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.C:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.C span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.C:hover span {
+  transform: translate3d(-600%, 0, 0);
+}
+
+.crudinfoheader {
+  display: flex;
+  overflow: hidden;
+}
+.about-crud p {
+  text-decoration: none;
+  color: #585858;
+  font-weight: 700;
+  vertical-align: top;
+  font-size: 1.5rem;
+}
+.about-crud {
+  margin-top: 2rem;
+  width: 50%;
+}
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .C {
+    width: 150px;
+    font-size: 2rem;
+  }
+  .about-crud p {
+    font-size: 1rem;
+  }
+  .about-crud {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  .C {
+    width: 140px;
+    font-size: 2rem;
+  }
+  .about-crud p {
+    font-size: 1rem;
+  }
+  .about-crud {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+
+  .C {
+    width: 100px;
+    font-size: 1.7rem;
+  }
+  .about-crud p {
+    font-size: 0.9rem;
+  }
+
+  .about-crud {
+    width: 95%;
+  }
+}

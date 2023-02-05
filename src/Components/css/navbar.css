@@ -1,0 +1,46 @@
+/* nav start */
+.navbar {
+  box-shadow: 2px 2px 10px 5px rgba(168, 168, 168, 0.267);
+}
+.navbar-toggler {
+  color: #fff;
+  font-size: 25px;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border-color: green;
+}
+.nav-link,
+.logo {
+  margin: 0px 15px;
+  color: #494949;
+}
+.nav-link {
+  font-size: 15px;
+}
+.navbar {
+  background-color: #f2f2f2;
+}
+.bars {
+  color: #1a1a1a;
+}
+.navitem {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+.list-group {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+
+/* nav end */
